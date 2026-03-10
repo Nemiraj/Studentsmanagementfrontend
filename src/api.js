@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const BASE = '/api/students';
+// Production API URL - Render Backend
+const BASE = 'https://studentsmanagementbackend.onrender.com/api/students';
 
 export const getStudents = (search = '') =>
   axios.get(BASE, { params: search ? { search } : {} }).then(r => r.data.data);
